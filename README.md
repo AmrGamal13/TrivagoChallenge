@@ -37,4 +37,6 @@ _________
  A- (open test output folder) and you will get a generated pdf report contains all the details of the execution (pass/fail)
  B- (open test-output/SparkReport), then open (index.html) file on any browser and you will get detailed info of the status of every step in every scenario per every feature file
     
+    ### for checking the report from on the cucumber cloud , pasted the highlited link on the browser and you will get it 
     
+<img width="883" alt="Screen Shot 2021-01-02 at 6 09 46 PM" src="https://user-images.githubusercontent.com/66884373/103463559-f725ff00-4d35-11eb-98b0-cd820cc91f2f.png">
