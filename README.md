@@ -36,7 +36,10 @@ _________
 
 ## Running the project 
  1. Navigate to the location of the project on your local machine via CMD/Termimal
- 2. Run (mvn clean test)
+ 2. Run 
+ ```bash 
+ mvn clean test
+  ```
 ## Generating The Test Reports :
  1. (open test output folder) and you will get a generated pdf report contains all the details of the execution (pass/fail)
  2. (open test-output/SparkReport), then open (index.html) file on any browser and you will get detailed info of the status of every step in every scenario per every feature file
