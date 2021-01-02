@@ -1,12 +1,12 @@
 # TrivagoChallenge
  ## That Automation Testing is Hybrid framework which Uses 
- 1- Selenium
- 2- Maven Jaba
- 3-Cucumber BDD (Gherkin language) via Junit ,
- 4-DDT using Excel sheet (for storing locators of the webElements)
- 5-using Cucumber 6 Extent report for generating PDF & Spark reports
- 6- Using TestNg for assertions
- 6-Reading from Properties files for storing environment variables
+ 1. Selenium
+ 2. Maven Jaba
+ 3. Cucumber BDD (Gherkin language) via Junit ,
+ 4. DDT using Excel sheet (for storing locators of the webElements)
+ 5. using Cucumber 6 Extent report for generating PDF & Spark reports
+ 6. Using TestNg for assertions
+ 7. Reading from Properties files for storing environment variables
 _________
 
 ## Structure of Project:
