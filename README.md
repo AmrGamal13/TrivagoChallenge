@@ -37,3 +37,5 @@ For running the project
  A- (open test output folder) and you will get a generated pdf report contains all the details of the execution (pass/fail)
  B- (open test-output/SparkReport), then open (index.html) file on any browser and you will get detailed info of the status
     of every step in every scenario per every feature file
+    
+    <img width="883" alt="Screen Shot 2021-01-02 at 6 09 46 PM" src="https://user-images.githubusercontent.com/66884373/103463340-508d2e80-4d34-11eb-8ef3-09051f6e7596.png">
