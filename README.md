@@ -1,5 +1,5 @@
 # TrivagoChallenge
- ##That Automation Testing is Hybrid framework which Uses 
+ ## That Automation Testing is Hybrid framework which Uses 
  1- Selenium
  2- Maven Jaba
  3-Cucumber BDD (Gherkin language) via Junit ,
@@ -9,7 +9,7 @@
  6-Reading from Properties files for storing environment variables
 _________
 
-##Structure of Project:
+## Structure of Project:
 1- src/main/java
  A- pages Package includes the designated pages of trivago magazine
  B-Utilites Package includes a class of common methods like (scroll to the webelement)
@@ -30,7 +30,7 @@ _________
 
 _________
 
-##For running the project 
+## For running the project 
 1- Navigate to the location of the project on your local machine via CMD/Termimal
 2- Run (mvn clean test)
 3- To check the report :
