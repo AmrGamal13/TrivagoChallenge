@@ -1,4 +1,8 @@
 # TrivagoChallenge
+## Table of contents
+* [Structure of Project](#project structure)
+* [Running the project](#how to run the project)
+* [Generating The Test Reports](#generating test report)
  ## That Automation Testing is Hybrid framework which Uses 
  1. Selenium
  2. Maven Jaba
@@ -30,14 +34,14 @@ _________
 
 _________
 
-## For running the project 
+## Running the project 
  1. Navigate to the location of the project on your local machine via CMD/Termimal
  2. Run (mvn clean test)
- ### To check the report :
+## Generating The Test Reports :
  1. (open test output folder) and you will get a generated pdf report contains all the details of the execution (pass/fail)
  2. (open test-output/SparkReport), then open (index.html) file on any browser and you will get detailed info of the status of every step in every scenario per every feature file
     
-  ### For checking the report from on the cucumber cloud , pasted the highlited link on the browser and you will get it 
+ ### For checking the report from on the cucumber cloud , pasted the highlited link on the browser and you will get it 
     
 <img width="883" alt="Screen Shot 2021-01-02 at 6 09 46 PM" src="https://user-images.githubusercontent.com/66884373/103463559-f725ff00-4d35-11eb-98b0-cd820cc91f2f.png">
 
