@@ -6,8 +6,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
@@ -18,7 +16,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pages.ExtractorData;
+import utilities.Helper;
+
 
 
 public class TrivagoMagazinePage {
@@ -26,7 +25,8 @@ public class TrivagoMagazinePage {
 	WebDriver driver;
 	ExtractorData ex;
 	WebDriverWait wait;
-	JavascriptExecutor js ;
+	JavascriptExecutor js;
+	
 
 
 	public TrivagoMagazinePage(WebDriver driver) {
@@ -36,7 +36,7 @@ public class TrivagoMagazinePage {
 	public void clickContactLink() throws Exception {
 		ex = new ExtractorData();
 		WebElement contact_link= driver.findElement(By.xpath(ex.Locaters("TrivagoMagazineHome", 1)));
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", contact_link);
+		Helper.scroll_to_element(contact_link, driver);
 		contact_link.click();
 	}
 
@@ -64,11 +64,11 @@ public class TrivagoMagazinePage {
 	public void subscribeToNewsLetter() throws Exception {
 		ex = new ExtractorData();
 		WebElement email = driver.findElement(By.xpath(ex.Locaters("TrivagoMagazineHome", 4)));
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", email);
-		String Email =RandomStringUtils.randomAlphabetic(10);
-		System.out.println("Email is ....>" + Email);
+		
+		Helper.scroll_to_element(email, driver);
+		String generatedEmail =RandomStringUtils.randomAlphabetic(10);
 
-		email.sendKeys(Email+"@email.com");
+		email.sendKeys(generatedEmail+"@email.com");
 
 		WebElement inspire_Bttn = driver.findElement(By.xpath(ex.Locaters("TrivagoMagazineHome", 5)));
 		inspire_Bttn.click();
@@ -196,6 +196,8 @@ public class TrivagoMagazinePage {
 	}
 	
 	public String getContentLoadedEvent() {
+		js= ((JavascriptExecutor) driver);
+
 		
 		Object eventName = js.executeScript("return window.dataLayer[12].event");
 		String contentLoadeddEventName = eventName.toString();
@@ -205,6 +207,8 @@ public class TrivagoMagazinePage {
 	
 	public  Object gethotelIds_params()
 	{
+		js= ((JavascriptExecutor) driver);
+
 		Object hotelIds_Value = js.executeScript("return window.dataLayer[12].hotelIds");
 		return hotelIds_Value;
 	}
@@ -212,9 +216,38 @@ public class TrivagoMagazinePage {
 
 	public  String getTargetProperties()
 	{
-		String code = "target-properties";
+		js= ((JavascriptExecutor) driver);
+
 		Object targetproperties_Value = js.executeScript("return window.dataLayer[12]['target-properties']");
 		String targetproperties = targetproperties_Value.toString();
 		return targetproperties;
 	}
+	
+	public  String getTrustLoadedEvent()
+	{
+		js= ((JavascriptExecutor) driver);
+		
+		Object event_Trust = js.executeScript("return window.dataLayer[0].event");
+		String trustloadedEventName = event_Trust.toString();
+		return trustloadedEventName;
+	}
+	
+	public  String getTrustGroupsLoadedEvent()
+	{
+		js= ((JavascriptExecutor) driver);
+		Object event_Groupsl = js.executeScript("return window.dataLayer[2].event");
+		String groupsLoadedEventName = event_Groupsl.toString();
+		return groupsLoadedEventName;
+	}
+	
+	
+	public  String getoptanonLoadedEvent()
+	{
+		js= ((JavascriptExecutor) driver);
+		Object event_Optanon = js.executeScript("return window.dataLayer[1].event");
+		String optanonLoadedEventName = event_Optanon.toString();
+		return optanonLoadedEventName;
+	}
+	
+	
 }

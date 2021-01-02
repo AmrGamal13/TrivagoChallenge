@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/java/Features/DataLayerEvents.feature"},
+		features = {"src/test/java/Features"},
 		glue= {"stepDefinitions", "hooks"},
 		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		

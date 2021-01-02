@@ -25,7 +25,7 @@ public class TrivagoHooks {
 	@Before
 	public void before() throws IOException 
 	{
-		System.out.println("Before the browser");
+		System.out.println("Intitalizing the browser");
 		read = new ReadProperties();
 		if (read.getPropValues("browserName").equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();

@@ -1,18 +1,12 @@
 package stepDefinitions;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import hooks.TrivagoHooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -29,7 +23,6 @@ public class Steps  {
 	SearchResultsPage resultObj = new SearchResultsPage(TrivagoHooks.driver);
 	ContactFormPage contObj = new ContactFormPage(TrivagoHooks.driver);
 	ReadProperties read ;
-	JavascriptExecutor js = ((JavascriptExecutor) TrivagoHooks.driver);
 
 	@Given("I am on the trivago magazine home page")
 	public void i_am_on_the_trivago_magazine_home_page() throws IOException {
@@ -154,24 +147,15 @@ public class Steps  {
 
 	@Then("some events are triggered such as {string}, {string}, {string}")
 	public void some_events_are_triggered_such_as(String TrustLoaded, String OptanonLoaded, String TrustGroupsLoaded) {
-		Object event_Trust = js.executeScript("return window.dataLayer[0].event");
-		String trustloadedEventName = event_Trust.toString();
-		Assert.assertEquals(trustloadedEventName, TrustLoaded);
 		
-		Object event_Optanon = js.executeScript("return window.dataLayer[1].event");
-		String optanonLoadedEventName = event_Optanon.toString();
-		Assert.assertEquals(optanonLoadedEventName, OptanonLoaded);
-		
-		
-		Object event_Groupsl = js.executeScript("return window.dataLayer[2].event");
-		String groupsLoadedEventName = event_Groupsl.toString();
-		Assert.assertEquals(groupsLoadedEventName, TrustGroupsLoaded);
-		
-		
+		Assert.assertEquals(homeObj.getTrustLoadedEvent(), TrustLoaded);
+		Assert.assertEquals(homeObj.getoptanonLoadedEvent(), OptanonLoaded);
+		Assert.assertEquals(homeObj.getTrustGroupsLoadedEvent(), TrustGroupsLoaded);	
 	}
 
 	@Then("every event includes some parameters")
 	public void every_event_includes_some_parameters() {
+		
 		Assert.assertTrue(homeObj.getOnetrustloaded_params().containsAll(homeObj.Expected_params()));
 		Assert.assertTrue(homeObj.getOptanonloaded_params().containsAll(homeObj.Expected_params()));
 		Assert.assertTrue(homeObj.getTrustGroupsupdated_params().containsAll(homeObj.Expected_params()));
@@ -191,7 +175,6 @@ public class Steps  {
 	@Then("target-properties has same path in the URL")
 	public void target_properties_has_same_path_in_the_url() {
 	   String url = TrivagoHooks.driver.getCurrentUrl();
-	  // homeObj.getTargetProperties();
 	   Assert.assertTrue(url.contains(homeObj.getTargetProperties()));
 	}
 }
