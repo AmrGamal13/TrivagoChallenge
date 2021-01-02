@@ -49,4 +49,8 @@ _________
 
 ### Extent Generated Report  - 1 
 
+<img width="276" alt="Screen Shot 2021-01-02 at 8 12 36 PM" src="https://user-images.githubusercontent.com/66884373/103463743-52a4bc80-4d37-11eb-9cbb-572ee6fb61a8.png">
+
+### Extent Generated Report  - 2
+
 
