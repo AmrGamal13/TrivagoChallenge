@@ -1,8 +1,8 @@
 # TrivagoChallenge
 ## Table of contents
-* [Structure of Project](#project structure)
-* [Running the project](#how to run the project)
-* [Generating The Test Reports](#generating test report)
+* [Structure of Project](## Structure of Project)
+* [Running the project](## Running the project)
+* [Generating The Test Reports](## Generating The Test Reports)
  ## That Automation Testing is Hybrid framework which Uses 
  1. Selenium
  2. Maven Jaba
