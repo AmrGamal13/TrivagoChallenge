@@ -1,8 +1,5 @@
 # TrivagoChallenge
-## Table of contents
-* [Structure of Project](## Structure of Project)
-* [Running the project](## Running the project)
-* [Generating The Test Reports](## Generating The Test Reports)
+
  ## That Automation Testing is Hybrid framework which Uses 
  1. Selenium
  2. Maven Jaba
@@ -12,7 +9,11 @@
  6. Using TestNg for assertions
  7. Reading from Properties files for storing environment variables
 _________
-
+## Automation Limitation:
+* Title of the search results for some countries aren’t displaying sometimes such as Brazil
+* no href for some links in the home page، javascript value in the href
+* hard to automate the visual testing for the alignments of the texts and the images in the articles
+_________
 ## Structure of Project:
 ### 1- src/main/java
   * pages Package includes the designated pages of trivago magazine
