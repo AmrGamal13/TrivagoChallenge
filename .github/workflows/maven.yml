@@ -18,5 +18,10 @@ jobs:
       
     steps:
     - uses: actions/checkout@v2
-    - name: Test
-      run: mvn test
+    - name: setup JDK 15
+      uses: actions/setup-java@v2
+      with:
+      java-version: '15'
+      distribution: 'adopt'
+    - name: Build with Maven
+      run: mvn clean test
