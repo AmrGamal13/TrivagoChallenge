@@ -2,7 +2,7 @@
 
  ## That Automation Testing is Hybrid framework which Uses 
  1. Selenium
- 2. Maven Jaba
+ 2. Maven Java
  3. Cucumber BDD (Gherkin language) via Junit ,
  4. DDT using Excel sheet (for storing locators of the webElements)
  5. using Cucumber 6 Extent report for generating PDF & Spark reports
